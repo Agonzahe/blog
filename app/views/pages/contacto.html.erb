@@ -1,0 +1,21 @@
+<%= form_for :post do |f| %>
+  <p>
+  <h2>Formulario de Contacto</h2>
+    <%= f.label :Asunto %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :Correo %><br>
+    <%= f.text_field :mail %>
+  </p>
+
+  <p>
+    <%= f.label :Descripción %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit :Enviar %>
+  </p>
+<% end %>
