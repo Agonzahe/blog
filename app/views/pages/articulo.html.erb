@@ -1,11 +1,18 @@
 <h2 class="title-contact">Todos los Articulos</h2>
-<%#<%= link_to "Agregar Nuevo Articulo", articulo_new_path, class: 'btn btn-primary' %><br>
+<%= link_to "Nuevo Articulo", articulo_new_path, class: 'btn btn-primary' %><br>
 <br>
+<h3 style="color: green"><%= notice %></h3>
+<br>
+<%= paginate @articulo %>
+<br>
+
 <% @articulo.each do |art| %>
   <h3 class='movies'>Titulo: <span><%= art.titulo %></span></h3>
   <h3 class='movies'>Contenido: <span><%= art.contenido %></span></h3>
 <br> 
 <br> 
 <% end %> 
-<%= link_to "Nuevo articulo", articulo_new_path, class: 'btn btn-primary' %><br>
-<%# pagy = para crear paginas en las vistas web %>
+<%# <%= link_to "Ver articulo", articles_path(art.id), class: 'btn btn-primary' %><br> %>
+
+<br> 
+<%= paginate @articulo %>
