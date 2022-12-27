@@ -1,0 +1,15 @@
+<h1 class="title-contact">Incorporar Nuevo</h1>
+
+<%= form_with model: @articles, class: 'form' do |form| %>
+  <div class="form-group">
+    <%= form.label :Ingrese_Titulo %>
+    <%= form.text_field :titulo, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ingrese_contenido %>
+    <%= form.text_area :contenido, class: 'form-control' %>
+  </div>
+  <%= form.submit "Guardar", class: 'btn btn-primary' %>
+<% end %>
+<%= link_to "Volver a los Articulos", articulo_path, class: 'btn btn-primary' %>
